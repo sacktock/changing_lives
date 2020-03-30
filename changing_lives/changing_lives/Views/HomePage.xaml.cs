@@ -52,31 +52,25 @@ namespace changing_lives.Views
         {
             var button = (Button)sender;
             var text = button.Text;
-            await Browser.OpenAsync(new Uri(text), BrowserLaunchMode.SystemPreferred);
-        }
-
-        public ICommand ClickCommand => new Command<string>(async (url) =>
-        {
-            try
+            try 
             {
-                if (!string.IsNullOrEmpty(url))
+                if (IsValidUri(text))
                 {
-                    if (!url.Trim().StartsWith("http", StringComparison.OrdinalIgnoreCase))
-                    {
-                        url = "http://" + url;
-                    }
-                    if (IsValidUri(url))
-                    {
-                        await Browser.OpenAsync(new Uri(url), BrowserLaunchMode.SystemPreferred);
-                    }
+                    await Browser.OpenAsync(new Uri(text), BrowserLaunchMode.SystemPreferred);
                 }
-            }
+                else 
+                {
+                    return;
+                }
+            } 
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
+                await DisplayAlert("Error", "Could not follow the link", "Ok");
+                return;
             }
-
-        });
+            
+        }
 
         private void ItemsListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
