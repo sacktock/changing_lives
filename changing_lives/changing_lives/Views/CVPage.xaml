@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="changing_lives.Views.CVPage"
+             Title="CV Helpcenter">
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout Padding="12">
+                <Label Text="How: To write a CV"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="19" 
+                   Style="{DynamicResource ListItemTextStyle}"/>
+
+                <Label Text="6 Steps to help you write a CV "
+                   Style="{DynamicResource ListItemDetailTextStyle}"
+                   FontSize="14"/>
+
+                <Label Text="&#x2022; Make sure you know when to use a CV"
+                   VerticalOptions="Center"
+                   Style="{DynamicResource ListItemDetailTextStyle}"
+                   FontSize="14"/>
+
+                <Label Text="&#x2022; Pick the best CV format "            
+                   VerticalOptions="Center"
+                   Style="{DynamicResource ListItemDetailTextStyle}"
+                   FontSize="14"/>
+
+                <Label Text="&#x2022; Add your contact information the right way"            
+                   VerticalOptions="Center"
+                   Style="{DynamicResource ListItemDetailTextStyle}"
+                   FontSize="14"/>
+
+                <Label Text="&#x2022; Start with a CV personal profile "
+                   VerticalOptions="Center"
+                   Style="{DynamicResource ListItemDetailTextStyle}"
+                   FontSize="14"/>
+
+                <Label Text="&#x2022; List your relevant work experience "
+                   VerticalOptions="Center"
+                   Style="{DynamicResource ListItemDetailTextStyle}"
+                   FontSize="14"/>
+
+                <Label Text="&#x2022; Complement your CV with a cover letter "  
+                   VerticalOptions="Center"
+                       Style="{DynamicResource ListItemDetailTextStyle}"
+                   FontSize="14"/>
+
+                <Label Text="What are the aims of a CV"
+                   FontAttributes="Bold"
+                   FontSize="19"
+                   Style="{DynamicResource ListItemTextStyle}"
+                   VerticalOptions="Center"/>
+
+                <Label Text="Career objective or resume objective acts as the pitch of your resume. It mentions the goal and objective of your career. Even though it is not a strict requirement to include a resume objective in your resume, a well-written objective can help you catch the attention of the recruiter."
+                   FontSize="14"
+                       Style="{DynamicResource ListItemDetailTextStyle}"
+                   VerticalOptions="Center"/>
+
+
+                <Label Text="What to avoid in a CV"
+                   FontSize="19"
+                   FontAttributes="Bold"
+                   Style="{DynamicResource ListItemTextStyle}"
+                   VerticalOptions="Center"/>
+
+                <Label Text="One of the worst mistakes you can make with your CV occurs before you start writing it, and it is: forgetting to do your research. Without researching the needs of your target employers, you will be basing the content on what you think should be on your CV. If you don't understand what your potential employers want to see in a candidate, you will be simply be using guesswork to write your CV, and setting yourself up to fail."
+                   FontSize="14"
+                   VerticalOptions="Center"/>
+
+
+                <Label Text="How to proofread your Cv"
+                   FontSize="19"
+                   FontAttributes="Bold"
+                   Style="{DynamicResource ListItemTextStyle}"
+                   VerticalOptions="Center"/>
+
+                <Label Text="Before you send your CV to employers, always take time to check your spelling, grammar and syntax. A clean, error-free CV increases readability and demonstrates professionalism.A well-composed CV shares all the most essential information employers need when considering you for job opportunities. By making sure your CV is comprehensive, correctly formatted and easy to read, you're one step closer to landing the job you want."
+                   FontSize="14"
+                   Style="{DynamicResource ListItemDetailTextStyle}"
+                   VerticalOptions="Center"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

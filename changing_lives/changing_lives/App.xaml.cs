@@ -1,4 +1,6 @@
-﻿using System;
+﻿using changing_lives.Services;
+using changing_lives.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +11,9 @@ namespace changing_lives
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            DependencyService.Register<ArticleStore>();
+            DependencyService.Register<ContactStore>();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

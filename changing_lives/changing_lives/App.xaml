@@ -6,6 +6,14 @@
              mc:Ignorable="d"
              x:Class="changing_lives.App">
     <Application.Resources>
+        <ResourceDictionary>
 
+            <Color x:Key="NavigationPrimary">#Ef539E</Color>
+            <Color x:Key="BarText">#FFFFFF</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource NavigationPrimary}" />
+                <Setter Property="BarTextColor" Value="{DynamicResource BarText}" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
