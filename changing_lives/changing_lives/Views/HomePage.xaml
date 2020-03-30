@@ -29,7 +29,7 @@
                             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0">
                                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="8">
                                     <StackLayout HorizontalOptions="Start"  VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="4">
-                                        <Image Source="icon.png" HeightRequest="48" WidthRequest="48" />
+                                        <Image Source="icon_img.png" HeightRequest="48" WidthRequest="48" />
                                         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="4">
                                             <Label 
                                             TextColor="Black"
