@@ -4,15 +4,73 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="changing_lives.Views.HomePage">
+             x:Class="changing_lives.Views.HomePage"
+             Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Image Source="https://i.ytimg.com/vi/JTxPzXQ1Sso/maxresdefault.jpg" 
-               VerticalOptions="Fill"
-               HorizontalOptions="Fill"></Image>
+
+        <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ListView
+                        x:Name="ItemsListView"
+                        ItemsSource="{Binding Articles}"
+                        VerticalOptions="FillAndExpand"
+                        HasUnevenRows="True"
+                        RefreshCommand="{Binding LoadArticlesCommand}"
+                        IsPullToRefreshEnabled="True"
+                        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                        ItemTapped="ItemsListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="8">
+                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                                    <Label
+                                        Text="{Binding Timestamp}"
+                                        HorizontalTextAlignment="End"
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="FillAndExpand"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="13"
+                                        />
+
+                                </StackLayout>
+                                <Label Text="{Binding Title}" 
+                                       HorizontalOptions="FillAndExpand" 
+                                       HorizontalTextAlignment="Center" 
+                                       VerticalOptions="FillAndExpand"
+                                       Style="{DynamicResource ListItemTextStyle}"
+                                       FontSize="19"
+                                       FontAttributes="Bold"
+                                       />
+                                <Label Text="{Binding Body}" 
+                                       HorizontalOptions="FillAndExpand" 
+                                       VerticalOptions="FillAndExpand"
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                                       FontSize="16"
+                                       />
+
+                                <ActivityIndicator   
+                                    IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}"   
+                                    AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 100"  
+                                    Color="#Ef539E"
+                                    AbsoluteLayout.LayoutFlags="PositionProportional">
+                                </ActivityIndicator>
+                                <Image x:Name="image" 
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                    Source="https://i.ytimg.com/vi/JTxPzXQ1Sso/maxresdefault.jpg"
+                                    />
+                                <Button x:Name="BtnLink" 
+                                        FontSize="Micro" 
+                                        TextColor="DarkSlateGray" 
+                                        BackgroundColor="#ECECEC" 
+                                        Text="{Binding link}" 
+                                        Clicked="OnButtonClicked"/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
