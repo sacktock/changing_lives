@@ -4,12 +4,77 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="changing_lives.Views.MessagingPage">
+             x:Class="changing_lives.Views.MessagingPage"
+             Title="{Binding Title}">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="NewItem_Clicked" IconImageSource="baseline_create_white_48.png" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <SearchBar Placeholder="Search contacts ..." TextChanged="SearchBar_OnTextChanged"></SearchBar>
+            <ListView x:Name="ItemsListView"
+                ItemsSource="{Binding Contacts}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadContactsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                ItemTapped="Handle_ItemTapped"
+                      >
+
+                <!---->
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Center">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                                    <Label
+                                        HorizontalOptions="Start"
+                                    Text="Moderator"
+                                    FontSize="12"
+                                        TextColor="#Ef539E"
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                        HorizontalTextAlignment="Start"
+                                    />
+                                    <Image Source="baseline_star_black_18.png" HeightRequest="12" WidthRequest="12" />
+                                    <Label
+                                        HorizontalOptions="Fill"
+                                    Text=""
+                                    FontSize="14"
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    HorizontalTextAlignment="End"
+                                    />
+                                </StackLayout>
+                                <StackLayout Padding="4" Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                                    <Image Source="baseline_supervisor_account_black_48.png" HeightRequest="48" WidthRequest="48" />
+                                    <StackLayout Padding="2" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
+                                        <Label
+                                            Text="{Binding Name}"
+                                            FontSize="16"
+                                            FontAttributes="Bold"
+                                            Style="{DynamicResource ListItemTextStyle}" 
+                                            HorizontalTextAlignment="Start"
+                                            LineBreakMode="NoWrap"
+                                            />
+                                        <Label
+                                            Text="{Binding Desc}"
+                                            FontSize="13"
+                                            Style="{DynamicResource ListItemDetailTextStyle}"
+                                            LineBreakMode="WordWrap"
+                                            HorizontalTextAlignment="Start"
+                                            />
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
