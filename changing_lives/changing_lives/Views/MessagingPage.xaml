@@ -24,6 +24,9 @@
                 CachingStrategy="RecycleElement"
                 ItemTapped="Handle_ItemTapped"
                 RefreshControlColor ="#Ef539E"
+                SelectionMode="None"
+                SeparatorColor="LightSlateGray"
+                SeparatorVisibility="Default"
                 >
 
                 <!---->

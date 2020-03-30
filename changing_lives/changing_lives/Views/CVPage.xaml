@@ -8,7 +8,12 @@
              Title="CV Helpcenter">
     <ContentPage.Content >
         <ScrollView>
+            <StackLayout>
+            <Image Source="employment_banner.png"
+                       HorizontalOptions="Fill"/>
             <StackLayout Padding="12">
+                
+                
                 <Label Text="How: To write a CV"
                    VerticalOptions="Center"
                    FontAttributes="Bold"
@@ -84,6 +89,9 @@
                    VerticalOptions="Center"/>
 
 
+            </StackLayout>
+                <Image Source="nlf_esf_dwp_logo.png"
+                       HorizontalOptions="Fill"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

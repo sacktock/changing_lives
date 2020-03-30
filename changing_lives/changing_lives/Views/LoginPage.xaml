@@ -10,32 +10,33 @@
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <!-- Place new controls here -->
             <StackLayout VerticalOptions="End">
-                <Image Source="logo.png" HorizontalOptions="CenterAndExpand" Margin="16"/>
+                <Image Source="logo.png" HorizontalOptions="Fill" Margin="16"/>
             </StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Label Text="Welcome to the changing-lives app" 
+                <StackLayout Margin="16">
+                <Label Text="Welcome to the changing-lives employability app." 
                        FontFamily="Geogrotesque"
            HorizontalOptions="Center"
            VerticalOptions="Center" 
                    TextColor="#253d98"/>
-                <Label Text="Please enter your user login code below" 
+                <Label Text="Please enter your user login code below." 
                        FontFamily="Geogrotesque"
            HorizontalOptions="Center"
            VerticalOptions="Center" 
                    TextColor="#253d98"/>
+                
                 <Entry Placeholder="User Login Code"
                    TextColor="#253d98"
                    TextChanged="Entry_TextChanged"
                    PlaceholderColor="#253d98"
                    IsSpellCheckEnabled="False"
-                   Margin="4"
                    IsTextPredictionEnabled="False"/>
                 <Button Text="Login" 
-                    Margin="16"
                     BackgroundColor="#Ef539E"
                     BorderColor="#Ef539E"
                     TextColor="White"
                     Clicked="OnButtonClicked"/>
+                </StackLayout>
 
             </StackLayout>
         </StackLayout>

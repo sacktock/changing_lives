@@ -19,15 +19,19 @@
                         IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                         RefreshControlColor ="#Ef539E"
                         ItemTapped="ItemsListView_ItemTapped"
-                >
+                        SelectionMode="None"
+                        SeparatorVisibility="None"
+                        CachingStrategy="RecycleElement"
+                        >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="8">
-                                <StackLayout HorizontalOptions="Start"  VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="4">
-                                    <Image Source="baseline_account_circle_black_48.png" HeightRequest="48" WidthRequest="48" />
-                                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="4">
-                                        <Label 
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0">
+                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="8">
+                                    <StackLayout HorizontalOptions="Start"  VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="4">
+                                        <Image Source="icon.png" HeightRequest="48" WidthRequest="48" />
+                                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="4">
+                                            <Label 
                                             TextColor="Black"
                                             Text="{Binding Title}" 
                                        HorizontalOptions="FillAndExpand" 
@@ -36,7 +40,7 @@
                                        FontSize="22"
                                        FontAttributes="Bold"
                                        />
-                                        <Label
+                                            <Label
                                         Text="{Binding Timestamp}"
                                         HorizontalTextAlignment="End"
                                         HorizontalOptions="FillAndExpand" 
@@ -44,33 +48,42 @@
                                         Style="{DynamicResource ListItemDetailTextStyle}"
                                         FontSize="13"
                                         />
+                                        </StackLayout>
                                     </StackLayout>
-                                </StackLayout>
-                                <Label Text="{Binding Body}" 
+
+                                    <Label Text="{Binding Body}" 
                                        HorizontalOptions="FillAndExpand" 
                                        VerticalOptions="FillAndExpand"
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                                        FontSize="16"
+                                       Margin="8"
                                        />
+                                </StackLayout>
 
                                 <ActivityIndicator   
-                                    IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}}}"   
+                                    IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}"   
+                                    IsVisible="{Binding Source={x:Reference image}, Path=IsLoading}"
                                     AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 100"  
                                     Color="#Ef539E"
                                     AbsoluteLayout.LayoutFlags="PositionProportional">
                                 </ActivityIndicator>
-                                <Image x:Name="image" 
-                                       VerticalOptions="Fill"
+                                <Image x:Name="image"                                      
                                        HorizontalOptions="Fill"
                                     Source="{Binding src}"
                                     />
                                 <Button x:Name="BtnLink" 
                                         FontSize="Micro" 
-                                        TextColor="DarkSlateGray" 
+                                        Padding="0"
+                                        FontAttributes="Bold"
+                                        TextColor="#666666" 
                                         BackgroundColor="#ECECEC" 
                                         Text="{Binding link}" 
                                         Clicked="OnButtonClicked"/>
-
+                                <Label
+                                HeightRequest="12"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill"
+                                BackgroundColor="#DDDDDD"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
