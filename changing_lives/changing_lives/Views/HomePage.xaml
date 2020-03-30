@@ -17,13 +17,26 @@
                         RefreshCommand="{Binding LoadArticlesCommand}"
                         IsPullToRefreshEnabled="True"
                         IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                        ItemTapped="ItemsListView_ItemTapped">
+                        RefreshControlColor ="#Ef539E"
+                        ItemTapped="ItemsListView_ItemTapped"
+                >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="8">
-                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Horizontal">
-                                    <Label
+                                <StackLayout HorizontalOptions="Start"  VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="4">
+                                    <Image Source="baseline_account_circle_black_48.png" HeightRequest="48" WidthRequest="48" />
+                                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="4">
+                                        <Label 
+                                            TextColor="Black"
+                                            Text="{Binding Title}" 
+                                       HorizontalOptions="FillAndExpand" 
+                                       HorizontalTextAlignment="Start" 
+                                       VerticalOptions="FillAndExpand"
+                                       FontSize="22"
+                                       FontAttributes="Bold"
+                                       />
+                                        <Label
                                         Text="{Binding Timestamp}"
                                         HorizontalTextAlignment="End"
                                         HorizontalOptions="FillAndExpand" 
@@ -31,16 +44,8 @@
                                         Style="{DynamicResource ListItemDetailTextStyle}"
                                         FontSize="13"
                                         />
-
+                                    </StackLayout>
                                 </StackLayout>
-                                <Label Text="{Binding Title}" 
-                                       HorizontalOptions="FillAndExpand" 
-                                       HorizontalTextAlignment="Center" 
-                                       VerticalOptions="FillAndExpand"
-                                       Style="{DynamicResource ListItemTextStyle}"
-                                       FontSize="19"
-                                       FontAttributes="Bold"
-                                       />
                                 <Label Text="{Binding Body}" 
                                        HorizontalOptions="FillAndExpand" 
                                        VerticalOptions="FillAndExpand"
@@ -49,7 +54,7 @@
                                        />
 
                                 <ActivityIndicator   
-                                    IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}"   
+                                    IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}}}"   
                                     AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 100"  
                                     Color="#Ef539E"
                                     AbsoluteLayout.LayoutFlags="PositionProportional">

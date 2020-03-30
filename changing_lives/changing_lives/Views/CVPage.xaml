@@ -72,7 +72,7 @@
                    VerticalOptions="Center"/>
 
 
-                <Label Text="How to proofread your Cv"
+                <Label Text="How to proofread your CV"
                    FontSize="19"
                    FontAttributes="Bold"
                    Style="{DynamicResource ListItemTextStyle}"

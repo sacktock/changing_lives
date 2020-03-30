@@ -23,7 +23,8 @@
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RecycleElement"
                 ItemTapped="Handle_ItemTapped"
-                      >
+                RefreshControlColor ="#Ef539E"
+                >
 
                 <!---->
 
