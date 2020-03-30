@@ -27,13 +27,18 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0">
+                                <Label
+                                HeightRequest="6"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill"
+                                BackgroundColor="#BBBBBB"/>
                                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="8">
                                     <StackLayout HorizontalOptions="Start"  VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="4">
                                         <Image Source="icon_img.png" HeightRequest="48" WidthRequest="48" />
                                         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="4">
-                                            <Label 
-                                            TextColor="Black"
+                                            <Label                                             
                                             Text="{Binding Title}" 
+                                                Style="{DynamicResource ListItemTextStyle}" 
                                        HorizontalOptions="FillAndExpand" 
                                        HorizontalTextAlignment="Start" 
                                        VerticalOptions="FillAndExpand"
@@ -80,10 +85,10 @@
                                         Text="{Binding link}" 
                                         Clicked="OnButtonClicked"/>
                                 <Label
-                                HeightRequest="12"
+                                HeightRequest="6"
                                 HorizontalOptions="Fill"
                                 VerticalOptions="Fill"
-                                BackgroundColor="#DDDDDD"/>
+                                BackgroundColor="#BBBBBB"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

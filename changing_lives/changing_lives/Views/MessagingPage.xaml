@@ -34,7 +34,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10" Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Center">
+                            <StackLayout Padding="10" Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Center" Spacing="0">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
                                     <Label
                                         HorizontalOptions="Start"
@@ -44,7 +44,7 @@
                                     Style="{DynamicResource ListItemTextStyle}" 
                                         HorizontalTextAlignment="Start"
                                     />
-                                    <Image Source="baseline_star_black_18.png" HeightRequest="12" WidthRequest="12" />
+                                    <Image Source="star.png" HeightRequest="12" WidthRequest="12" />
                                     <Label
                                         HorizontalOptions="Fill"
                                     Text=""
@@ -54,7 +54,7 @@
                                     />
                                 </StackLayout>
                                 <StackLayout Padding="4" Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
-                                    <Image Source="baseline_supervisor_account_black_48.png" HeightRequest="48" WidthRequest="48" />
+                                    <Image Source="icon_img.png" HeightRequest="48" WidthRequest="48" />
                                     <StackLayout Padding="2" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
                                         <Label
                                             Text="{Binding Name}"
