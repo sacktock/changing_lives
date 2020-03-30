@@ -17,7 +17,7 @@ namespace changing_lives.ViewModels
         public Command LoadArticlesCommand { get; set; }
         public HomeTabView()
         {
-            Title = "Chaging-Lives Feed";
+            Title = "Changing-Lives Feed";
             Articles = new ObservableCollection<Article>();
             LoadArticlesCommand = new Command(async () => await ExecuteLoadItemsCommand());
             // code here to load in messages on instantiation?

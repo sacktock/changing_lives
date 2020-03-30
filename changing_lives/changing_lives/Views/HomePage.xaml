@@ -47,7 +47,7 @@
                                        />
                                             <Label
                                         Text="{Binding Timestamp}"
-                                        HorizontalTextAlignment="End"
+                                        HorizontalTextAlignment="Start"
                                         HorizontalOptions="FillAndExpand" 
                                         VerticalOptions="FillAndExpand"
                                         Style="{DynamicResource ListItemDetailTextStyle}"
