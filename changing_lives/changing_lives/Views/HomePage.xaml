@@ -57,7 +57,7 @@
                                 <Image x:Name="image" 
                                        VerticalOptions="Fill"
                                        HorizontalOptions="Fill"
-                                    Source="https://i.ytimg.com/vi/JTxPzXQ1Sso/maxresdefault.jpg"
+                                    Source="{Binding src}"
                                     />
                                 <Button x:Name="BtnLink" 
                                         FontSize="Micro" 
