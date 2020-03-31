@@ -26,10 +26,8 @@ namespace changing_lives.Views
         async void OnButtonClicked(object sender, EventArgs e)
         {
             int authCode = await Authenticate();
-            if (authCode == 1) // this authentication is good enough for the prototype
+            if (authCode == 1) 
             {
-                // get the user account from the database
-                //UserAccount userAccount = new UserAccount{id = 0, email = "alex.w.goodall@gmail.com", first_name="Alex", second_name="Goodall", date_of_birth="30/09/1999", mobile_number="+447845440606", photo_link="" ,link="https://github.com/sacktock", is_moderator=true };
                 await Navigation.PushModalAsync(new MainPage()); // navigate to the main page
             }
             else if (authCode == 0)
@@ -48,9 +46,7 @@ namespace changing_lives.Views
 
         private async Task<int> Authenticate()
         {
-            //return true;
             return await fbase.authenticate(userCode);
-            // check if email and password are in the database
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)

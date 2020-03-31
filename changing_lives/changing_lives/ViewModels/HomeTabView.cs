@@ -20,7 +20,6 @@ namespace changing_lives.ViewModels
             Title = "Changing-Lives Feed";
             Articles = new ObservableCollection<Article>();
             LoadArticlesCommand = new Command(async () => await ExecuteLoadItemsCommand());
-            // code here to load in messages on instantiation?
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -39,17 +38,14 @@ namespace changing_lives.ViewModels
                 {
                     Articles.Add(article);
                 }
-                // get messages from datastore
-
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }
-            finally
-            {
-                IsBusy = false;
-            }
+           
+            IsBusy = false;
+
         }
     }
 }

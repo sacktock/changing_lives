@@ -72,7 +72,7 @@ namespace changing_lives.Views
             
         }
 
-        private void ItemsListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             ((ListView)sender).SelectedItem = null;
         }

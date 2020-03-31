@@ -47,10 +47,7 @@ namespace changing_lives.ViewModels
             {
                 Debug.WriteLine(ex);
             }
-            finally
-            {
-                IsBusy = false;
-            }
+            IsBusy = false;           
         }
     }
 }

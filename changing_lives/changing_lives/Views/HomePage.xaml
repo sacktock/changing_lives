@@ -18,7 +18,7 @@
                         IsPullToRefreshEnabled="True"
                         IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                         RefreshControlColor ="#Ef539E"
-                        ItemTapped="ItemsListView_ItemTapped"
+                        ItemTapped="Handle_ItemTapped"
                         SelectionMode="None"
                         SeparatorVisibility="None"
                         CachingStrategy="RecycleElement"
