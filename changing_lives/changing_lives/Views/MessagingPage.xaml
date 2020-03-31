@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:changing_lives"
              mc:Ignorable="d"
              x:Class="changing_lives.Views.MessagingPage"
              Title="{Binding Title}">
@@ -44,7 +45,7 @@
                                     Style="{DynamicResource ListItemTextStyle}" 
                                         HorizontalTextAlignment="Start"
                                     />
-                                    <Image Source="star.png" HeightRequest="12" WidthRequest="12" />
+                                    <Image Source="{local:ImageResource changing_lives.Images.star.png}" HeightRequest="12" WidthRequest="12" />
                                     <Label
                                         HorizontalOptions="Fill"
                                     Text=""
@@ -53,8 +54,8 @@
                                     HorizontalTextAlignment="End"
                                     />
                                 </StackLayout>
-                                <StackLayout Padding="4" Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
-                                    <Image Source="icon_img.png" HeightRequest="48" WidthRequest="48" />
+                                <StackLayout Padding="4" Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" Spacing="16">
+                                    <Image Source="{local:ImageResource changing_lives.Images.icon_img.png}" HeightRequest="48" WidthRequest="48" />
                                     <StackLayout Padding="2" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
                                         <Label
                                             Text="{Binding Name}"

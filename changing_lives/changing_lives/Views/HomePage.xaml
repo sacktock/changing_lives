@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="changing_lives.Views.HomePage"
+             xmlns:local="clr-namespace:changing_lives"
              Title="{Binding Title}">
     <ContentPage.Content>
 
@@ -34,7 +35,7 @@
                                 BackgroundColor="#BBBBBB"/>
                                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="8">
                                     <StackLayout HorizontalOptions="Start"  VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="4">
-                                        <Image Source="icon_img.png" HeightRequest="48" WidthRequest="48" />
+                                        <Image Source="{local:ImageResource changing_lives.Images.icon_img.png}" HeightRequest="48" WidthRequest="48" />
                                         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="4">
                                             <Label                                             
                                             Text="{Binding Title}" 

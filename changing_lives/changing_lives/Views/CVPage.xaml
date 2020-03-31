@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:changing_lives"
              mc:Ignorable="d"
              x:Class="changing_lives.Views.CVPage"
              Title="CV Helpcenter">
     <ContentPage.Content >
         <ScrollView>
             <StackLayout Spacing="0">
-            <Image Source="employment_banner.png"
+                <Image Source="{local:ImageResource changing_lives.Images.employment_banner.png}"
                        HorizontalOptions="Fill"/>
                 <StackLayout Padding="12">
                     <Label Text="How: To write a CV"
@@ -88,7 +89,7 @@
 
 
             </StackLayout>
-                <Image Source="nlf_esf_dwp_logo.png"
+                <Image Source="{local:ImageResource changing_lives.Images.nlf_esf_dwp_logo.png}"
                        HorizontalOptions="Fill"/>
             </StackLayout>
         </ScrollView>
