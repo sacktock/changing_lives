@@ -10,11 +10,11 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <!-- Place new controls here -->
-            <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand">
-                <Image Source="{local:ImageResource changing_lives.Images.logo.png}" HorizontalOptions="FillAndExpand"/>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="16">
+                <Image Source="{local:ImageResource changing_lives.Images.logo.png}" HorizontalOptions="FillAndExpand" Aspect="AspectFit"/>
             </StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand">
-                <StackLayout Margin="16">
+
+            <StackLayout Margin="16">
                 <Label Text="Welcome to the changing-lives employability app." 
                        FontFamily="Geogrotesque"
            HorizontalOptions="Center"
@@ -25,7 +25,7 @@
            HorizontalOptions="Center"
            VerticalOptions="Center" 
                    TextColor="#253d98"/>
-                
+
                 <Entry Placeholder="User Login Code"
                    TextColor="#253d98"
                    TextChanged="Entry_TextChanged"
@@ -37,8 +37,6 @@
                     BorderColor="#Ef539E"
                     TextColor="White"
                     Clicked="OnButtonClicked"/>
-                </StackLayout>
-
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
