@@ -2,7 +2,7 @@
 https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows
 
 # Debug with Android emulator or USB debugging
-https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows
+https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/
 https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/set-up-device-for-development
 
 # Firebase website
