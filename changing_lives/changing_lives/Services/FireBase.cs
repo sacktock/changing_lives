@@ -14,7 +14,7 @@ namespace changing_lives.Services
 
         public FireBase()
         {
-            firebase = new FirebaseClient("https://changing-lives-database-1a9c6.firebaseio.com/");
+            firebase = new FirebaseClient("https://changing-lives-database.firebaseio.com/");
             // replace the hyperlink above with the hyperlink of your database
         }
 
@@ -33,11 +33,11 @@ namespace changing_lives.Services
                 }
                 return 0;
 
-            }
-            catch
-            {
+           }
+           catch
+           {
                 return -1;
-            }
+           }
         }
 
         public async Task<List<Usercode>> GetAllUsercodesAsync()
