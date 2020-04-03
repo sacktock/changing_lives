@@ -14,7 +14,7 @@ namespace changing_lives.Services
 
         public FireBase()
         {
-            firebase = new FirebaseClient("https://changing-lives-database.firebaseio.com/");
+            firebase = new FirebaseClient("https://changing-lives-database-1a9c6.firebaseio.com/");
             // replace the hyperlink above with the hyperlink of your database
         }
 
