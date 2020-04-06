@@ -57,8 +57,8 @@ namespace changing_lives.Views
 
         async private void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-           // if (e.Item == null)
-               // return;
+            if (e.Item == null) { return; }
+           
 
             // handle item click
             try
@@ -91,6 +91,24 @@ namespace changing_lives.Views
                 await DisplayAlert("Unknown Error", "Failed to send Sms", "Ok");
 
             }
+        }
+
+        private async void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null) { return; }
+                
+            try
+            {
+                string[] recipients = { ((Contact)e.SelectedItem).Mobile_Number };
+                await SendSms("", recipients);
+            }
+            catch
+            {
+                await DisplayAlert("Item Error", "Failed to open chat", "OK");
+            }
+
+
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }
