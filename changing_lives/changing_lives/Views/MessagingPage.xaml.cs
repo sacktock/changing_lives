@@ -92,23 +92,5 @@ namespace changing_lives.Views
 
             }
         }
-
-        private async void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null) { return; }
-                
-            try
-            {
-                string[] recipients = { ((Contact)e.SelectedItem).Mobile_Number };
-                await SendSms("", recipients);
-            }
-            catch
-            {
-                await DisplayAlert("Item Error", "Failed to open chat", "OK");
-            }
-
-
-            ((ListView)sender).SelectedItem = null;
-        }
     }
 }
