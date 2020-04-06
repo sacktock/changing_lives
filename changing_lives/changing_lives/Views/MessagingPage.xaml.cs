@@ -57,8 +57,8 @@ namespace changing_lives.Views
 
         async private void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            if (e.Item == null)
-                return;
+           // if (e.Item == null)
+               // return;
 
             // handle item click
             try
@@ -68,7 +68,7 @@ namespace changing_lives.Views
             }
             catch
             {
-                // await DisplayAlert("Item Error", "Failed to open chat", "OK");
+                await DisplayAlert("Item Error", "Failed to open chat", "OK");
             }
 
 
